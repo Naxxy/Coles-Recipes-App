@@ -19,6 +19,14 @@
 		D0C17E852900322000FFB9C3 /* RecipeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E842900322000FFB9C3 /* RecipeDetails.swift */; };
 		D0C17E872900362F00FFB9C3 /* PreviewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E862900362F00FFB9C3 /* PreviewModels.swift */; };
 		D0C17E8A29003D0D00FFB9C3 /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E8929003D0D00FFB9C3 /* ContentManager.swift */; };
+		D0C17E8D2900433A00FFB9C3 /* RecipeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E8C2900433A00FFB9C3 /* RecipeTest.swift */; };
+		D0C17E8E2900446B00FFB9C3 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E812900319E00FFB9C3 /* Recipe.swift */; };
+		D0C17E8F2900451D00FFB9C3 /* RecipeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E842900322000FFB9C3 /* RecipeDetails.swift */; };
+		D0C17E902900456100FFB9C3 /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E8929003D0D00FFB9C3 /* ContentManager.swift */; };
+		D0C17E922900458F00FFB9C3 /* RecipeDetailsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E912900458F00FFB9C3 /* RecipeDetailsTest.swift */; };
+		D0C17E942900475200FFB9C3 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E932900475200FFB9C3 /* Ingredient.swift */; };
+		D0C17E96290047D200FFB9C3 /* IngredientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E95290047D200FFB9C3 /* IngredientTest.swift */; };
+		D0C17E97290047D600FFB9C3 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E932900475200FFB9C3 /* Ingredient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +62,10 @@
 		D0C17E842900322000FFB9C3 /* RecipeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetails.swift; sourceTree = "<group>"; };
 		D0C17E862900362F00FFB9C3 /* PreviewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewModels.swift; sourceTree = "<group>"; };
 		D0C17E8929003D0D00FFB9C3 /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
+		D0C17E8C2900433A00FFB9C3 /* RecipeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTest.swift; sourceTree = "<group>"; };
+		D0C17E912900458F00FFB9C3 /* RecipeDetailsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsTest.swift; sourceTree = "<group>"; };
+		D0C17E932900475200FFB9C3 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		D0C17E95290047D200FFB9C3 /* IngredientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +138,7 @@
 		D0C17E6329002DE500FFB9C3 /* Coles RecipesTests */ = {
 			isa = PBXGroup;
 			children = (
+				D0C17E8B2900431F00FFB9C3 /* Models */,
 				D0C17E6429002DE500FFB9C3 /* Coles_RecipesTests.swift */,
 			);
 			path = "Coles RecipesTests";
@@ -162,6 +175,7 @@
 			children = (
 				D0C17E812900319E00FFB9C3 /* Recipe.swift */,
 				D0C17E842900322000FFB9C3 /* RecipeDetails.swift */,
+				D0C17E932900475200FFB9C3 /* Ingredient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,6 +186,16 @@
 				D0C17E8929003D0D00FFB9C3 /* ContentManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		D0C17E8B2900431F00FFB9C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0C17E8C2900433A00FFB9C3 /* RecipeTest.swift */,
+				D0C17E912900458F00FFB9C3 /* RecipeDetailsTest.swift */,
+				D0C17E95290047D200FFB9C3 /* IngredientTest.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +331,7 @@
 			files = (
 				D0C17E852900322000FFB9C3 /* RecipeDetails.swift in Sources */,
 				D0C17E8A29003D0D00FFB9C3 /* ContentManager.swift in Sources */,
+				D0C17E942900475200FFB9C3 /* Ingredient.swift in Sources */,
 				D0C17E822900319E00FFB9C3 /* Recipe.swift in Sources */,
 				D0C17E5629002DE200FFB9C3 /* RecipeView.swift in Sources */,
 				D0C17E5429002DE200FFB9C3 /* Coles_RecipesApp.swift in Sources */,
@@ -318,7 +343,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C17E96290047D200FFB9C3 /* IngredientTest.swift in Sources */,
+				D0C17E8F2900451D00FFB9C3 /* RecipeDetails.swift in Sources */,
+				D0C17E902900456100FFB9C3 /* ContentManager.swift in Sources */,
+				D0C17E922900458F00FFB9C3 /* RecipeDetailsTest.swift in Sources */,
+				D0C17E97290047D600FFB9C3 /* Ingredient.swift in Sources */,
+				D0C17E8E2900446B00FFB9C3 /* Recipe.swift in Sources */,
 				D0C17E6529002DE500FFB9C3 /* Coles_RecipesTests.swift in Sources */,
+				D0C17E8D2900433A00FFB9C3 /* RecipeTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

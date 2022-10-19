@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Recipe {
+struct Recipe: Decodable {
     let dynamicTitle: String
     let dynamicDescription: String
     let dynamicThumbnail: String

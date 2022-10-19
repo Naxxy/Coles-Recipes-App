@@ -19,8 +19,11 @@ struct PreviewModels {
         amountNumber: 8,
         prepLabel: "Prep",
         prepTime: "15m",
+        prepNote: "+ cooling time",
         cookingLabel: "Cooking",
-        cookingTime: "15m"
+        cookingTime: "15m",
+        cookTimeAsMinutes: 15,
+        prepTimeAsMinutes: 15
     )
     
     static let sampleRecipe = Recipe(
@@ -32,8 +35,3 @@ struct PreviewModels {
         ingredients: sampleIngredients
     )
 }
-//"recipeDetails": {
-//  "prepNote": "+ cooling time",
-//  "cookTimeAsMinutes": 15,
-//  "prepTimeAsMinutes": 15
-//},
