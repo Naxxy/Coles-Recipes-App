@@ -8,10 +8,10 @@
 import Foundation
 
 struct PreviewModels {
-    static let sampleIngredients: [String] = [
-        "1 cup (250ml) extra virgin olive oil, divided",
-        "4 cups (240g) 2cm-pieces day-old Coles Bakery Stone Baked by Laurent Pane Di Casa",
-        "4 Lebanese eggplants, halved lengthways"
+    static let sampleIngredients: [Ingredient] = [
+        Ingredient(ingredient: "1 cup (250ml) extra virgin olive oil, divided"),
+        Ingredient(ingredient: "4 cups (240g) 2cm-pieces day-old Coles Bakery Stone Baked by Laurent Pane Di Casa"),
+        Ingredient(ingredient: "4 Lebanese eggplants, halved lengthways")
     ]
     
     static let sampleRecipeDetails = RecipeDetails(

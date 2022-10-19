@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RecipeDetails: Decodable {
+struct RecipeDetails: Decodable, Equatable {
     let amountLabel: String
     let amountNumber: Int
     let prepLabel: String

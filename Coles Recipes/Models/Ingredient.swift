@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ingredient: Decodable {
+struct Ingredient: Decodable, Equatable {
     let ingredient: String
 }
 

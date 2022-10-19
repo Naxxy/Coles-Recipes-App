@@ -88,7 +88,7 @@ struct RecipeDetailsItemView: View {
 }
 
 struct IngredientsView: View {
-    let ingredients: [String]
+    let ingredients: [Ingredient]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
@@ -98,8 +98,8 @@ struct IngredientsView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.vertical)
             
-            ForEach(ingredients, id: \.self) { ingredient in
-                Label(ingredient, systemImage: "chevron.forward")
+            ForEach(ingredients, id: \.ingredient) { ingredient in
+                Label(ingredient.ingredient, systemImage: "chevron.forward")
                     .font(.body)
             }
         }
