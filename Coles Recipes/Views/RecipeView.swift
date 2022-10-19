@@ -30,7 +30,11 @@ struct RecipeView: View {
                     .frame(height: 300)
                 
                 // Recipe Details
+                Divider()
+                
                 RecipeDetailsView(recipeDetails: recipe.recipeDetails)
+                
+                Divider()
                 
                 // Recipe Ingredients
                 IngredientsView(ingredients: recipe.ingredients)
@@ -45,20 +49,34 @@ struct RecipeDetailsView: View {
     
     var body: some View {
         HStack {
-            VStack {
-                Text(recipeDetails.amountLabel)
-                Text(String(recipeDetails.amountNumber))
-            }
+            RecipeDetailsItemView(title: recipeDetails.amountLabel, subtitle: String(recipeDetails.amountNumber))
+                .frame(maxWidth: .infinity)
             
-            VStack {
-                Text(recipeDetails.prepLabel)
-                Text(recipeDetails.prepTime)
-            }
+            Divider()
             
-            VStack {
-                Text(recipeDetails.cookingLabel)
-                Text(recipeDetails.cookingTime)
-            }
+            RecipeDetailsItemView(title: recipeDetails.prepLabel, subtitle: recipeDetails.prepTime)
+                .frame(maxWidth: .infinity)
+            
+            Divider()
+            
+            RecipeDetailsItemView(title: recipeDetails.cookingLabel, subtitle: recipeDetails.cookingTime)
+                .frame(maxWidth: .infinity)
+        }
+    }
+}
+
+struct RecipeDetailsItemView: View {
+    let title: String
+    let subtitle: String
+    
+    var body: some View {
+        VStack(alignment: .center) {
+            Text(title)
+                .font(.subheadline)
+                .opacity(0.7)
+            
+            Text(subtitle)
+                .font(.headline)
         }
     }
 }
