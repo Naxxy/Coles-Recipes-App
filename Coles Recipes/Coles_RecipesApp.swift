@@ -11,7 +11,8 @@ import SwiftUI
 struct Coles_RecipesApp: App {
     var body: some Scene {
         WindowGroup {
-            RecipeView()
+            // TODO: Connect RecipeView to Real Data
+            RecipeView(recipe: PreviewModels.sampleRecipe)
         }
     }
 }

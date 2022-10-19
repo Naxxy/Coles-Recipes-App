@@ -9,41 +9,44 @@ import SwiftUI
 
 // MARK: - Content
 struct RecipeView: View {
+    let recipe: Recipe
+    
     var body: some View {
         ScrollView {
             VStack {
-                Text("Recipe title")
+                Text(recipe.dynamicTitle)
                 
-                Text("Recipe subtitle")
+                Text(recipe.dynamicDescription)
                 
                 Rectangle()
                     .frame(maxWidth: .infinity)
                     .frame(height: 300)
                 
                 // Recipe Details
+                let recipeDetails = recipe.recipeDetails
                 HStack {
                     VStack {
-                        Text("Serves")
-                        Text(String(8))
+                        Text(recipeDetails.amountLabel)
+                        Text(String(recipeDetails.amountNumber))
                     }
                     
                     VStack {
-                        Text("Prep")
-                        Text("15m")
+                        Text(recipeDetails.prepLabel)
+                        Text(recipeDetails.prepTime)
                     }
                     
                     VStack {
-                        Text("Cooking")
-                        Text("4h 30m")
+                        Text(recipeDetails.cookingLabel)
+                        Text(recipeDetails.cookingTime)
                     }
                 }
                 
                 // Recipe Ingredients
                 Text("Ingredients")
                 
-                Label("First Ingredient", systemImage: "chevron.forward")
-                Label("Second Ingredient", systemImage: "chevron.forward")
-                Label("Third Ingredient", systemImage: "chevron.forward")
+                ForEach(recipe.ingredients, id: \.self) { ingredient in
+                    Label(ingredient, systemImage: "chevron.forward")
+                }
             }
             .padding()
         }
@@ -53,6 +56,6 @@ struct RecipeView: View {
 // MARK: - Previews
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeView()
+        RecipeView(recipe: PreviewModels.sampleRecipe)
     }
 }
