@@ -14,4 +14,8 @@ struct Recipe {
     let dynamicThumbnailAlt: String
     let recipeDetails: RecipeDetails
     let ingredients: [String]
+    
+    func dynamicThumbnailUrl() -> URL? {
+        return URL(string: dynamicThumbnail, relativeTo: ContentManager.baseUrl)
+    }
 }

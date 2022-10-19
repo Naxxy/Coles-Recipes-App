@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: - Content
 struct RecipeView: View {
-    let recipe: Recipe
+    var recipe: Recipe
     
     var body: some View {
         ScrollView {
@@ -24,10 +24,16 @@ struct RecipeView: View {
                     .font(.subheadline)
                     .multilineTextAlignment(.center)
                 
-                // TODO: Replace rectangle with URL image
-                Rectangle()
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 300)
+                if let url = recipe.dynamicThumbnailUrl() {
+                    AsyncImage(url: url) { image in
+                        image
+                            .resizable()
+                            .scaledToFit()
+                    } placeholder: {
+                        ProgressView()
+                            .progressViewStyle(.circular)
+                    }
+                }
                 
                 // Recipe Details
                 Divider()
