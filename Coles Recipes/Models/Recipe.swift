@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct Recipes: Decodable {
+    let recipes: [Recipe]
+}
+
 struct Recipe: Decodable {
     let dynamicTitle: String
     let dynamicDescription: String
