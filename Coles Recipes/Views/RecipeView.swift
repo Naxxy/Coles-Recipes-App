@@ -29,6 +29,7 @@ struct RecipeView: View {
                         image
                             .resizable()
                             .scaledToFit()
+                            .accessibilityLabel(recipe.dynamicThumbnailAlt)
                     } placeholder: {
                         ProgressView()
                             .progressViewStyle(.circular)
