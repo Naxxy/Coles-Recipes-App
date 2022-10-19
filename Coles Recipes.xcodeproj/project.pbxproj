@@ -14,6 +14,7 @@
 		D0C17E6529002DE500FFB9C3 /* Coles_RecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E6429002DE500FFB9C3 /* Coles_RecipesTests.swift */; };
 		D0C17E6F29002DE600FFB9C3 /* Coles_RecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E6E29002DE600FFB9C3 /* Coles_RecipesUITests.swift */; };
 		D0C17E7129002DE600FFB9C3 /* Coles_RecipesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E7029002DE600FFB9C3 /* Coles_RecipesUITestsLaunchTests.swift */; };
+		D0C17E7F29002EA900FFB9C3 /* recipesSample.json in Resources */ = {isa = PBXBuildFile; fileRef = D0C17E7E29002EA900FFB9C3 /* recipesSample.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		D0C17E6A29002DE500FFB9C3 /* Coles RecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coles RecipesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C17E6E29002DE600FFB9C3 /* Coles_RecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coles_RecipesUITests.swift; sourceTree = "<group>"; };
 		D0C17E7029002DE600FFB9C3 /* Coles_RecipesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coles_RecipesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D0C17E7E29002EA900FFB9C3 /* recipesSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipesSample.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,7 @@
 			children = (
 				D0C17E5329002DE200FFB9C3 /* Coles_RecipesApp.swift */,
 				D0C17E5529002DE200FFB9C3 /* ContentView.swift */,
-				D0C17E5729002DE500FFB9C3 /* Assets.xcassets */,
+				D0C17E7D29002E8F00FFB9C3 /* Resources */,
 				D0C17E5929002DE500FFB9C3 /* Preview Content */,
 			);
 			path = "Coles Recipes";
@@ -125,6 +127,15 @@
 				D0C17E7029002DE600FFB9C3 /* Coles_RecipesUITestsLaunchTests.swift */,
 			);
 			path = "Coles RecipesUITests";
+			sourceTree = "<group>";
+		};
+		D0C17E7D29002E8F00FFB9C3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0C17E7E29002EA900FFB9C3 /* recipesSample.json */,
+				D0C17E5729002DE500FFB9C3 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C17E7F29002EA900FFB9C3 /* recipesSample.json in Resources */,
 				D0C17E5B29002DE500FFB9C3 /* Preview Assets.xcassets in Resources */,
 				D0C17E5829002DE500FFB9C3 /* Assets.xcassets in Resources */,
 			);
