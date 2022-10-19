@@ -13,11 +13,18 @@ struct RecipeView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(alignment: .center, spacing: 20) {
                 Text(recipe.dynamicTitle)
+                    .font(.largeTitle)
+                    .bold()
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 32)
                 
                 Text(recipe.dynamicDescription)
+                    .font(.subheadline)
+                    .multilineTextAlignment(.center)
                 
+                // TODO: Replace rectangle with URL image
                 Rectangle()
                     .frame(maxWidth: .infinity)
                     .frame(height: 300)
@@ -43,15 +50,22 @@ struct RecipeView: View {
                 
                 // Recipe Ingredients
                 Text("Ingredients")
+                    .font(.largeTitle)
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.vertical)
                 
                 ForEach(recipe.ingredients, id: \.self) { ingredient in
                     Label(ingredient, systemImage: "chevron.forward")
+                        .font(.body)
                 }
             }
             .padding()
         }
     }
 }
+
+
 
 // MARK: - Previews
 struct ContentView_Previews: PreviewProvider {
