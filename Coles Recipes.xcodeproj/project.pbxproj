@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D0C17E5429002DE200FFB9C3 /* Coles_RecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E5329002DE200FFB9C3 /* Coles_RecipesApp.swift */; };
-		D0C17E5629002DE200FFB9C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E5529002DE200FFB9C3 /* ContentView.swift */; };
+		D0C17E5629002DE200FFB9C3 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E5529002DE200FFB9C3 /* RecipeView.swift */; };
 		D0C17E5829002DE500FFB9C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C17E5729002DE500FFB9C3 /* Assets.xcassets */; };
 		D0C17E5B29002DE500FFB9C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C17E5A29002DE500FFB9C3 /* Preview Assets.xcassets */; };
 		D0C17E6529002DE500FFB9C3 /* Coles_RecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C17E6429002DE500FFB9C3 /* Coles_RecipesTests.swift */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		D0C17E5029002DE200FFB9C3 /* Coles Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coles Recipes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C17E5329002DE200FFB9C3 /* Coles_RecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coles_RecipesApp.swift; sourceTree = "<group>"; };
-		D0C17E5529002DE200FFB9C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D0C17E5529002DE200FFB9C3 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		D0C17E5729002DE500FFB9C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0C17E5A29002DE500FFB9C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0C17E6029002DE500FFB9C3 /* Coles RecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coles RecipesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,8 +96,8 @@
 		D0C17E5229002DE200FFB9C3 /* Coles Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				D0C17E8029002F1000FFB9C3 /* Views */,
 				D0C17E5329002DE200FFB9C3 /* Coles_RecipesApp.swift */,
-				D0C17E5529002DE200FFB9C3 /* ContentView.swift */,
 				D0C17E7D29002E8F00FFB9C3 /* Resources */,
 				D0C17E5929002DE500FFB9C3 /* Preview Content */,
 			);
@@ -136,6 +136,14 @@
 				D0C17E5729002DE500FFB9C3 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D0C17E8029002F1000FFB9C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0C17E5529002DE200FFB9C3 /* RecipeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0C17E5629002DE200FFB9C3 /* ContentView.swift in Sources */,
+				D0C17E5629002DE200FFB9C3 /* RecipeView.swift in Sources */,
 				D0C17E5429002DE200FFB9C3 /* Coles_RecipesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
