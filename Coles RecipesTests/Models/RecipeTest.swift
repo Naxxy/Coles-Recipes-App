@@ -55,26 +55,22 @@ final class RecipeTest: XCTestCase {
         Ingredient(ingredient: "4 Lebanese eggplants, halved lengthways")
     ]
     
-    func testInitFromJSON() throws {
+    func testDecodeFromJSON() throws {
         let data = recipeJSON.data(using: .utf8)!
         
         let jsonDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-        let recipe = Recipe(json: jsonDictionary)
+        let recipe = try! JSONDecoder().decode(Recipe.self, from: data)
         
-        if let recipe = recipe {
-            // Check primitives
-            XCTAssertEqual(recipe.dynamicTitle, jsonDictionary["dynamicTitle"] as? String)
-            XCTAssertEqual(recipe.dynamicDescription, jsonDictionary["dynamicDescription"] as? String)
-            XCTAssertEqual(recipe.dynamicThumbnail, jsonDictionary["dynamicThumbnail"] as? String)
-            XCTAssertEqual(recipe.dynamicThumbnailAlt, jsonDictionary["dynamicThumbnailAlt"] as? String)
-            
-            // Check Recipe Details
-            XCTAssertEqual(recipe.recipeDetails, recipeDetails)
-            
-            // Check Ingredients
-            XCTAssertEqual(recipe.ingredients, ingredients)
-        } else {
-            XCTAssertNotNil(recipe)
-        }
+        // Check primitives
+        XCTAssertEqual(recipe.dynamicTitle, jsonDictionary["dynamicTitle"] as? String)
+        XCTAssertEqual(recipe.dynamicDescription, jsonDictionary["dynamicDescription"] as? String)
+        XCTAssertEqual(recipe.dynamicThumbnail, jsonDictionary["dynamicThumbnail"] as? String)
+        XCTAssertEqual(recipe.dynamicThumbnailAlt, jsonDictionary["dynamicThumbnailAlt"] as? String)
+        
+        // Check Recipe Details
+        XCTAssertEqual(recipe.recipeDetails, recipeDetails)
+        
+        // Check Ingredients
+        XCTAssertEqual(recipe.ingredients, ingredients)
     }
 }

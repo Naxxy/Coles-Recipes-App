@@ -15,16 +15,12 @@ final class IngredientTest: XCTestCase {
         }
     """
 
-    func testInitFromJSON() throws {
+    func testDecodeFromJSON() throws {
         let data = ingredientJSON.data(using: .utf8)!
         
         let jsonDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-        let ingredient = Ingredient(json: jsonDictionary)
+        let ingredient = try! JSONDecoder().decode(Ingredient.self, from: data)
         
-        if let ingredient = ingredient {
-            XCTAssertEqual(ingredient.ingredient, jsonDictionary["ingredient"] as? String)
-        } else {
-            XCTAssertNotNil(ingredient)
-        }
+        XCTAssertEqual(ingredient.ingredient, jsonDictionary["ingredient"] as? String)
     }
 }

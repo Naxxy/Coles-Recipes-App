@@ -23,24 +23,21 @@ final class RecipeDetailsTest: XCTestCase {
         }
         """
 
-    func testInitFromJSON() throws {
+    func testDecodeFromJSON() throws {
         let data = recipeDetailsJSON.data(using: .utf8)!
         
         let jsonDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-        let recipeDetails = RecipeDetails(json: jsonDictionary)
+        let recipeDetails = try! JSONDecoder().decode(RecipeDetails.self, from: data)
         
-        if let recipeDetails = recipeDetails {
-            XCTAssertEqual(recipeDetails.amountLabel, jsonDictionary["amountLabel"] as? String)
-            XCTAssertEqual(recipeDetails.amountNumber, jsonDictionary["amountNumber"] as? Int)
-            XCTAssertEqual(recipeDetails.prepLabel, jsonDictionary["prepLabel"] as? String)
-            XCTAssertEqual(recipeDetails.prepTime, jsonDictionary["prepTime"] as? String)
-            XCTAssertEqual(recipeDetails.prepNote, jsonDictionary["prepNote"] as? String)
-            XCTAssertEqual(recipeDetails.cookingLabel, jsonDictionary["cookingLabel"] as? String)
-            XCTAssertEqual(recipeDetails.cookingTime, jsonDictionary["cookingTime"] as? String)
-            XCTAssertEqual(recipeDetails.cookTimeAsMinutes, jsonDictionary["cookTimeAsMinutes"] as? Int)
-            XCTAssertEqual(recipeDetails.prepTimeAsMinutes, jsonDictionary["prepTimeAsMinutes"] as? Int)
-        } else {
-            XCTAssertNotNil(recipeDetails)
-        }
+        
+        XCTAssertEqual(recipeDetails.amountLabel, jsonDictionary["amountLabel"] as? String)
+        XCTAssertEqual(recipeDetails.amountNumber, jsonDictionary["amountNumber"] as? Int)
+        XCTAssertEqual(recipeDetails.prepLabel, jsonDictionary["prepLabel"] as? String)
+        XCTAssertEqual(recipeDetails.prepTime, jsonDictionary["prepTime"] as? String)
+        XCTAssertEqual(recipeDetails.prepNote, jsonDictionary["prepNote"] as? String)
+        XCTAssertEqual(recipeDetails.cookingLabel, jsonDictionary["cookingLabel"] as? String)
+        XCTAssertEqual(recipeDetails.cookingTime, jsonDictionary["cookingTime"] as? String)
+        XCTAssertEqual(recipeDetails.cookTimeAsMinutes, jsonDictionary["cookTimeAsMinutes"] as? Int)
+        XCTAssertEqual(recipeDetails.prepTimeAsMinutes, jsonDictionary["prepTimeAsMinutes"] as? Int)
     }
 }
